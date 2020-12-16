@@ -1,0 +1,53 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+header{
+    /* border: 1px solid red; */
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+/* nav{
+    border: 1px solid black;
+} */
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+.drop-down{
+    position: absolute;
+    background-color: black;
+    opacity: 0.8;
+    left: 0;
+    right: 0;
+    top: 75px;
+    display: none;
+}
+#works:hover .drop-down{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.my-par{
+    /* position: absolute;
+    background-color: blanchedalmond; */
+}
+main{
+    z-index: 1;
+    /* margin-top: 80px; */
+}
+section{
+    padding-top: 200px;
+}
+
