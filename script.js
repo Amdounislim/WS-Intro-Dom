@@ -1,54 +1,45 @@
-document.getElementsByClassName('un')[0].addEventListener('click', function(){
-    document.getElementsByClassName('un')[0].innerText= 10000
+// alert('ok')
+// document.getElementById('un').addEventListener('click', function(){
+//     document.getElementById('un').innerHTML= "Hello"
+// })
+var x = document.getElementsByClassName('un')[0]
+x.addEventListener('click', function(){
+    x.innerHTML= "Hello"
+    x.nextElementSibling.innerHTML="Bonjour"
+    x.parentElement.lastElementChild.innerHTML="100000"
+    document.getElementsByTagName('header')[0].style.backgroundColor="pink"
 })
 
-// let un = document.querySelector('.un')
-// un.addEventListener('click', function(){
-//     un.innerHTML="Hello"
-//     un.nextElementSibling.innerHTML="bonjour"
-//     // un.nextElementSibling.nextElementSibling.style.textDecoration="underline"
-//     un.parentElement.lastElementChild.style.textDecoration="underline"
-// })
-// let un = document.querySelector('#un')
-// un.addEventListener('click', function(){
-// })
 
-// let par=document.querySelector('.my-par')
-// document.getElementById('home').addEventListener("click", function(){
-//     // if(par.style.display==="none"){
-//     //     par.style.display="block"
-//     // }
-//     // else{
-
-//         par.style.color="white"
-//         par.style.backgroundColor="white"
-
-//     // }
-// })
-
-// let par=document.querySelector('.my-par')
-// document.getElementById('contact').addEventListener("click", function(){
-//     // if(par.style.display==="none"){
-//     //     par.style.display="block"
-//     // }
-//     // else{
-
-//         par.style.color="black"
-//         par.style.backgroundColor="pink"
-//     // }
-// })
-
-
-let links= Array.from(document.getElementsByClassName("lien"))
-console.log(links)
-let paras= Array.from(document.getElementsByTagName("p"))
-console.log(paras)
+var links =Array.from( document.querySelectorAll(".lien"))
+var paras = Array.from(document.querySelectorAll("p"))
+let color=["red", "green", "blue", "yellow"]
 
 for(let i=0; i<links.length; i++){
-    links[i].addEventListener("mouseover", function(){
-        paras[i].style.backgroundColor="pink"
-    })
-    links[i].addEventListener("mouseout", function(){
-        paras[i].style.backgroundColor="white"
+    links[i].addEventListener("click", function(){
+        paras[i].style.color=color[i]
     })
 }
+
+for(let para of paras){
+    para.addEventListener("click", function(){
+        if(para.style.backgroundColor==="pink"){
+            para.style.backgroundColor="white"
+        }
+        else{
+            para.style.backgroundColor="pink"
+        }
+    })
+}
+
+for(let para of paras){
+    para.addEventListener("mouseover", function(){
+        para.style.fontSize="30px"
+    })
+}
+for(let para of paras){
+    para.addEventListener("mouseout", function(){
+        para.style.fontSize="18px"
+    })
+}
+
